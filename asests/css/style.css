@@ -1,0 +1,63 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    background-color: gainsboro;
+    height: 100vh;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+button{
+  padding: 12px 12px;
+    background-color: rgb(76, 76, 236);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  width: 60%;
+  max-width: 500px;
+  /* ⚠️ position/display/transform نده! مرورگر خودش وسط‌چین می‌کنه */
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+dialog input,
+dialog textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.dialog menu {
+  display: flex;
+  gap: 8px;
+  justify-content: space-around;
+ align-items: center;
+}
