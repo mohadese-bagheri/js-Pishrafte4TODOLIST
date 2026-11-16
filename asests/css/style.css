@@ -1,28 +1,27 @@
-
-*{
-    box-sizing: border-box;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
 }
 
-body{
-    background-color: gainsboro;
-    height: 100vh;
-    text-align: center;
-    margin-top: 2rem;
+body {
+  background-color: gainsboro;
+  height: 100vh;
+  text-align: center;
+  margin-top: 2rem;
 }
 
-h2{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-button{
+button {
   padding: 12px 12px;
-    background-color: rgb(76, 76, 236);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
+  background-color: rgb(76, 76, 236);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 dialog {
@@ -59,5 +58,79 @@ dialog textarea {
   display: flex;
   gap: 8px;
   justify-content: space-around;
- align-items: center;
+  align-items: center;
+}
+
+/* پایه‌ی همه‌ی دکمه‌های عملیات */
+#taskList .task_actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  /* جای fs-2x */
+  line-height: 1;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+  /* جای shadow */
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+
+#taskList .task_actions button:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+#taskList .task_actions button:active {
+  transform: translateY(0);
+  filter: brightness(.95);
+}
+
+/* رنگ‌ها */
+#taskList .task_actions button.yellow {
+  background: #f5b301;
+}
+
+#taskList .task_actions button.red {
+  background: #e74c3c;
+}
+
+#taskList .task_actions button.green {
+  background: #2ecc71;
+}
+
+#taskList .task_actions button.orange {
+  background: #e67e22;
+}
+
+#taskList li {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.425);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-content: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: auto;
+  margin-bottom: 1rem;
+}
+
+#taskList li.completed {
+  background: #d4edda !important;
+  border-color: #28a745;
+}
+
+#taskList li.not_completed {
+  background: #f8d7da !important;
+  border-color: #dc3545;
 }
